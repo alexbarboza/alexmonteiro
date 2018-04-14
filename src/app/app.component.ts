@@ -1,16 +1,9 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-root',
-//   templateUrl: './app.component.html',
-//   styleUrls: ['./app.component.css']
-// })
-// export class AppComponent {
-//   title = 'app';
-// }
 import { Component } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
+import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
+
+const now = new Date();
 
 @Component({
   selector: 'app-root',
@@ -18,8 +11,14 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['app.component.css']
 })
 export class AppComponent {
-  items: Observable<any[]>;
-  constructor(db: AngularFirestore) {
-    this.items = db.collection('testes').valueChanges();
+  // items: Observable<any[]>;
+  // constructor(db: AngularFirestore) {
+  //   this.items = db.collection('testes').valueChanges();
+  // }
+
+  errorMessage = '';
+
+  onClickMe() {
+    this.errorMessage = 'Usuário não encontrado ou senha inválida';
   }
 }

@@ -1,5 +1,25 @@
-<ul>
+<!-- <ul>
   <li *ngFor="let item of items | async">
     {{ item.nome }}
   </li>
-</ul>
+</ul> -->
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Página restrita</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Você precisa se logar para utilizar o sistema</h6>
+    <form>
+        <p>
+          <ngb-alert *ngIf="errorMessage" [dismissible]="false">{{errorMessage}}</ngb-alert>
+        </p>
+      <div class="form-group">
+        <label for="email">Usuário:</label>
+        <input type="email" class="form-control" id="email">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Senha:</label>
+        <input type="password" class="form-control" id="pwd">
+      </div>
+      <button type="submit" class="btn btn-default" (click)="onClickMe()">Enviar</button>
+    </form>
+  </div>
+</div>
