@@ -27,6 +27,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './login/login.component'; // https://ng-bootstrap.github.io/#/getting-started
+import { RouterModule } from '@angular/Router';
+import { routerConfig } from './router.config';
 
 @NgModule({
   imports: [
@@ -35,7 +37,8 @@ import { LoginComponent } from './login/login.component'; // https://ng-bootstra
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
-    NgbModule.forRoot() // imports ng-bootstrap
+    NgbModule.forRoot(), // imports ng-bootstrap
+    RouterModule.forRoot(routerConfig),
   ],
   declarations: [ 
     AppComponent, LoginComponent
