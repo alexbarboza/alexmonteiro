@@ -25,7 +25,8 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; // https://ng-bootstrap.github.io/#/getting-started
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './login/login.component'; // https://ng-bootstrap.github.io/#/getting-started
 
 @NgModule({
   imports: [
@@ -37,7 +38,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; // https://ng-bootstrap.
     NgbModule.forRoot() // imports ng-bootstrap
   ],
   declarations: [ 
-    AppComponent
+    AppComponent, LoginComponent
   ],
   bootstrap: [ AppComponent ]
 })
