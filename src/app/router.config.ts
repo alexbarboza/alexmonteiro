@@ -13,6 +13,6 @@ export const routerConfig : Route[] = [
     },
     {
         path: '**',
-        redirectTo: ''
+        redirectTo: 'login'
     },
 ];
