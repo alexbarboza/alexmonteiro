@@ -1,10 +1,6 @@
-<p>
-  <button type="button" class="btn btn-default" (click)="login()">Login</button>
-  <button type="button" class="btn btn-default" (click)="logout()">Logout</button>
-</p>
-<p *ngIf="user; else elseBlock">
+<span *ngIf="user; else elseBlock">
   Bem vindo {{user?.displayName}}!
-</p>
+</span>
 <ng-template #elseBlock>
-  Realize o login!
+  <button type="button" class="btn btn-default" (click)="login()">Login</button>
 </ng-template>
